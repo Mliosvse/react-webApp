@@ -1,0 +1,162 @@
+.App {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.App_header {
+  height: 170px;
+  width: 100%;
+  color: white;
+  margin: 0 !important;
+}
+.App_banner{
+  width: 100%;
+  height: 170px;
+}
+
+.App_data{
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  background: #ffffff;
+  div{
+    width: 50%;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 14px;
+    color: #565656;
+    font-size: 13px;
+    span{
+      color: #1d1d1d;
+      font-size: 18px;
+    }
+  }
+  div:last-of-type{
+    border-left: 1px solid #e0e0e0;
+  }
+}
+
+.app_tip{
+  color: #aaaaaa;
+  font-size: 13px;
+  padding-left: 30px;
+  text-align: left;
+  line-height: 40px;
+  border-top: 1px solid #e0e0e0;
+  background: #ffffff;
+}
+
+.app_newTag{
+  background: #ffffff;
+  margin-top: 10px;
+  .new_title{
+    height: 21px;
+    line-height: 21px;
+    text-align: left;
+    color: #1d1d1d;
+    font-size: 14px;
+    padding-left:6%;
+    padding-top: 10px;
+    .new_tag {
+      height: 16px;
+      line-height: 16px;
+      border-radius: 8px;
+      padding: 0 5px;
+      border: 1px solid #1EB6EE;
+      color: #1EB6EE;
+      margin-left: 10px;
+      font-size: 11px;
+    }
+  }
+  .new_block{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15% 0 6%;
+    &>div{
+      text-align: left;
+      margin-top: 12px;
+      span{
+        color: #bdbdbd;
+        font-size: 11px;
+      }
+      p{
+        color: #ff6450;
+        font-size: 32px;
+        line-height: 60px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .new_btn{
+    line-height: 44px;
+    color: #ff6450;
+    font-size: 16px;
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+.tztz{
+  background: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding:0 6%;
+  &>p{
+    line-height: 36px;
+    color: #565656;
+    font-size: 14px;
+    text-align: left;
+  }
+}
+.carousel{
+  margin: 0 !important;
+}
+.carousel_content{
+  height: 100px;
+  padding: 0;
+  li{
+    display: flex;
+    justify-content: space-between;
+    span{
+      width: 33%;
+      text-align: left;
+      color: #aaaaaa;
+      font-size: 12px;
+      line-height: 32px;
+    }
+    span:nth-of-type(2){
+      text-align: center;
+    }
+    span:nth-of-type(3){
+      text-align: right;
+    }
+  }
+}
+.footer{
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  &>li{
+    line-height: 60px;
+    color: #aaaaaa;
+    font-size: 11px;
+    display: flex;
+    justify-content: flex-start;
+    span{
+      display: block;
+      margin-top: 20px;
+      margin-right: 8px;
+      width: 22px;
+      height: 22px;
+      background: url("../images/home_centralenterprises.png") center no-repeat;
+      background-size:100%;
+    }
+  }
+  &>li:last-of-type{
+    span{
+      background: url("../images/home_capitalcustody.png") center no-repeat;
+      background-size:100%;
+    }
+  }
+}
