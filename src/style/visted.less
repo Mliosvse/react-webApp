@@ -1,88 +1,132 @@
 .visted{
   margin-bottom: 50px;
-  .vsd_headery{
-    height: 50px;
-    background: #ff6450;
-    display: flex;
-    justify-content: flex-start;
-    padding: 0 4%;
-    .user_icon{
-      width: 30px;
-      height: 30px;
-      margin-top: 10px;
-      position: relative;
-      img{
+  .vsd_fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    .vsd_headery{
+      height: 50px;
+      background: #ff6450;
+      display: flex;
+      justify-content: flex-start;
+      padding: 0 4%;
+      .user_icon{
         width: 30px;
         height: 30px;
-        border-radius: 50%;
+        margin-top: 10px;
+        position: relative;
+        img{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+        }
+        &:after{
+          content: "";
+          display: block;
+          position: absolute;
+          background:#ffffff url("../images/edit.png") center no-repeat;
+          background-size: 100%;
+          right: 0;
+          bottom: 0;
+          width: 10px;
+          height:10px;
+        }
       }
-      &:after{
-        content: "";
-        display: block;
-        position: absolute;
-        background:#ffffff url("../images/edit.png") center no-repeat;
+      .user_mobile{
+        padding-left: 10px;
+        width: 78%;
+        line-height: 50px;
+        color: #ffffff;
+      }
+      .user_message{
+        margin-top: 15px;
+        width: 30px;
+        height: 20px;
+        background: url("../images/message.png") center no-repeat;
         background-size: 100%;
-        right: 0;
-        bottom: 0;
-        width: 10px;
-        height:10px;
+        position: relative;
+        &>span{
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #ffffff;
+          top: -3px;
+          right: 0;
+        }
       }
     }
-    .user_mobile{
-      padding-left: 10px;
-      width: 78%;
-      line-height: 50px;
-      color: #ffffff;
+    .vsd_headern{
+      height: 118px;
+      background: #ff6450;
+      padding-top: 40px;
+      box-sizing: border-box;
+      &>div{
+        width: 135px;
+        text-align: center;
+        line-height: 36px;
+        border: 1px solid #ffffff;
+        border-radius: 5px;
+        color: #ffffff;
+        margin: 0 auto;
+      }
     }
-    .user_message{
-      margin-top: 15px;
-      width: 30px;
-      height: 20px;
-      background: url("../images/message.png") center no-repeat;
-      background-size: 100%;
-      position: relative;
-      &>span{
-        position: absolute;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: #ffffff;
-        top: -3px;
-        right: 0;
+    .vsd_gap{
+      height: 10px;
+      background: #f5f6fb;
+    }
+    .vtdList_title{
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+      div{
+        width: 50%;
+        text-align: center;
+        color: #565656;
+        line-height: 44px;
+        border-bottom: 1px solid #e9e9e9;
+        cursor: pointer;
+      }
+      .title_active{
+        color: #ff6450;
+        border-bottom: 1px solid #ff6450;
       }
     }
   }
-  .vsd_headern{
-    height: 118px;
-    background: #ff6450;
-    padding-top: 40px;
-    box-sizing: border-box;
-    &>div{
-      width: 135px;
-      text-align: center;
-      line-height: 36px;
-      border: 1px solid #ffffff;
-      border-radius: 5px;
-      color: #ffffff;
-      margin: 0 auto;
-    }
-  }
-  .vtdList_title{
-    display: flex;
-    margin-top: 10px;
-    justify-content: space-between;
-    background: #ffffff;
-    div{
-      width: 50%;
-      text-align: center;
-      color: #565656;
-      line-height: 44px;
+  .vtdList_content{
+    margin-top: 190px;
+    .vtdList_item{
+      height: 90px;
       border-bottom: 1px solid #e9e9e9;
-      cursor: pointer;
-    }
-    .title_active{
-      color: #ff6450;
-      border-bottom: 1px solid #ff6450;
+      padding: 15px 20px 0;
+      display: flex;
+      justify-content: space-between;
+      background: #ffffff;
+      img{
+        display: block;
+        width: 80px;
+        height: 60px;
+        margin-right: 12px;
+      }
+      &>div{
+        width: calc(100% - 96px);
+        p{
+          width: 100%;
+          color: #565656;
+          font-size: 14px;
+          height: 40px;
+        }
+        span{
+          color: #aaaaaa;
+          font-size: 12px;
+          display: block;
+          width: 100%;
+          margin-top: 10px;
+          text-align: right;
+        }
+      }
     }
   }
 }
