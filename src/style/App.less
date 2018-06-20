@@ -41,11 +41,23 @@
 .app_tip{
   color: #aaaaaa;
   font-size: 13px;
-  padding-left: 30px;
+  padding-left: 48px;
   text-align: left;
   line-height: 40px;
   border-top: 1px solid #e0e0e0;
   background: #ffffff;
+  position: relative;
+  &:after{
+    content: "";
+    display: block;
+    width: 13px;
+    height: 11px;
+    background: url("../images/home_notice@2x.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 14px;
+    left: 30px;
+  }
 }
 
 .app_newTag{

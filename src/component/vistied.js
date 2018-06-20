@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react';
 import { List,PullToRefresh } from 'antd-mobile';
 import { get, post} from  '../utils/request';
 import style from '../style/visted.less';
@@ -63,8 +62,9 @@ class Vistied extends Component {
         });
         return listsData;
     }
-    listClick = (id) =>{
-        console.log(id);
+    listClick = (data) =>{
+        console.log(data);
+        window.location.href = data.clickUrl;
     }
   render() {
     const lists = this.state.lists;
@@ -100,7 +100,7 @@ class Vistied extends Component {
     //遍历数据数组，生成需要的dom集合
     let items = dataLists.map((item,index)=>{
         return (
-            <div className={style.vtdList_item} key={item.id} onClick={()=>{this.listClick(item.id)}}>
+            <div className={style.vtdList_item} key={item.id} onClick={()=>{this.listClick(item)}}>
                 <img src={item.newsImg} alt=""/>
                 <div>
                     <p>{item.title}</p>
@@ -111,23 +111,20 @@ class Vistied extends Component {
     })
     return (
       <div className={style.visted}>
-          <div className={style.vsd_fixed}>
-              {login}
-              <HorizontalLists lists={lists}></HorizontalLists>
-              <div className={style.vsd_gap}></div>
-              <div className={style.vtdList_title}>
-                  <div onClick={()=>{this.setState({active:"first"})}} className={active==="first" ? style.title_active:""}>满兜动态</div>
-                  <div onClick={()=>{this.setState({active:"second"})}} className={active==="second" ? style.title_active:""}>满兜科普</div>
-              </div>
+          {login}
+          <HorizontalLists lists={lists}></HorizontalLists>
+          <div className={style.vtdList_title}>
+              <div onClick={()=>{this.setState({active:"first"})}} className={active==="first" ? style.title_active:""}>满兜动态</div>
+              <div onClick={()=>{this.setState({active:"second"})}} className={active==="second" ? style.title_active:""}>满兜科普</div>
           </div>
           <div className={style.vtdList_content}>
               <PullToRefresh
-                  damping={250}
+                  damping={60}
                   distanceToRefresh={60}
                   ref={el => this.ptr = el}
                   style={{
                       overflow: 'auto',
-                      height:this.state.height - 190
+                      height:register ? this.state.height - 230 : this.state.height - 298
                   }}
                   indicator={active==="first"?dtIndicator:kpIndicator}
                   direction= "up"

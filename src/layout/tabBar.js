@@ -9,7 +9,7 @@ class MyTabBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTab: 'index',
+            selectedTab: window.sessionStorage.selectedTab || 'index',
             hidden: false,
         };
     }
@@ -38,6 +38,7 @@ class MyTabBar extends React.Component {
                         selected={this.state.selectedTab === 'index'}
                         onPress={() => {
                             this.props.history.push("/index");
+                            window.sessionStorage.selectedTab = "index";
                             this.setState({
                                 selectedTab: 'index',
                             });
@@ -65,6 +66,7 @@ class MyTabBar extends React.Component {
                         selected={this.state.selectedTab === 'product'}
                         onPress={() => {
                             this.props.history.push("/product");
+                            window.sessionStorage.selectedTab = "product";
                             this.setState({
                                 selectedTab: 'product',
                             });
@@ -92,6 +94,7 @@ class MyTabBar extends React.Component {
                         selected={this.state.selectedTab === 'friend'}
                         onPress={() => {
                             this.props.history.push("/friend");
+                            window.sessionStorage.selectedTab = "friend";
                             this.setState({
                                 selectedTab: 'friend',
                             });
@@ -116,6 +119,7 @@ class MyTabBar extends React.Component {
                         selected={this.state.selectedTab === 'money'}
                         onPress={() => {
                             this.props.history.push("/money");
+                            window.sessionStorage.selectedTab = "money";
                             this.setState({
                                 selectedTab: 'money',
                             });
@@ -140,6 +144,7 @@ class MyTabBar extends React.Component {
                         selected={this.state.selectedTab === 'vistied'}
                         onPress={() => {
                             this.props.history.push("/vistied");
+                            window.sessionStorage.selectedTab = "vistied";
                             this.setState({
                                 selectedTab: 'vistied',
                             });
