@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { List } from 'antd-mobile';
 import { get, post} from  '../utils/request';
 import style from '../style/money.less';
-import HorizontalLists from '../layout/horizontalLists'
 
 class Money extends Component {
     constructor(prop){

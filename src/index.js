@@ -5,6 +5,7 @@ import './utils/util';
 import App from './component/App';
 import Vistied from './component/vistied';
 import Money from './component/money';
+import Product from './component/product';
 import MyTabBar from './layout/tabBar';
 import { Route,Redirect, HashRouter, Switch } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
@@ -24,6 +25,7 @@ class Index extends React.Component {
                 <div>
                     <Switch>
                         <Route  exact path="/index" component={App}/>
+                        <Route  exact path="/product" component={Product}/>
                         <Route  exact path="/vistied" component={Vistied}/>
                         <Route  exact path="/Money" component={Money}/>
                         <Route path="/" render={() => {
