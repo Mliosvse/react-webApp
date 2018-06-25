@@ -24,13 +24,23 @@
 //List列表样式
 .lists{
   padding-top: 10px;
-  padding-bottom: 14px;
+  .list{
+    padding-bottom: 13px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    &:last-of-type{
+      border: none;
+    }
+  }
   .list_title{
     display: flex;
     justify-content: space-between;
     .list_name{
       font-size: 15px;
       color: #000000;
+    }
+    .list_grayName{
+      color: #aaaaaa;
     }
     .list_normalLable{
       color: #ffffff;
@@ -40,6 +50,9 @@
       line-height: 16px;
       padding: 0px 4px;
       margin-right: 7px;
+    }
+    .list_grayNomlLable{
+      background: #aaaaaa;
     }
     .list_vipLable{
       color: #ffffff;
@@ -56,7 +69,7 @@
         height: 13px;
         position: relative;
         top: 2px;
-        left: -1px;
+        left: -2px;
         background:#ffffff url("../images/crown1.png") no-repeat;
         background-size: 100%;
       }
@@ -79,6 +92,9 @@
         font-size: 15px;
       }
     }
+    .list_grayRate{
+      color: #aaaaaa;
+    }
     .list_intervals{
       font-size: 20px;
       color: #1d1d1d;
@@ -88,11 +104,17 @@
         font-size: 13px;
       }
     }
+    .list_grayIntervals{
+      color: #aaaaaa;
+    }
     .list_remark{
       color: #717171;
       font-size: 11px;
       display: block;
       margin-top: 5px;
+    }
+    .list_grayRemark{
+      color: #aaaaaa;
     }
     .list_yyBtn{
       font-size: 12px;
@@ -103,10 +125,14 @@
       margin-top: 10px;
       padding: 0 7px;
     }
+    .list_garyYyBtn{
+      color: #aaaaaa;
+      border: 1px solid #aaaaaa;
+    }
   }
   .list_bottom{
     margin-top: 10px;
-    .list_commonLabel{
+    .list_hotLabel{
       font-size: 11px;
       color: #ff6450;
       border: 1px solid #ff6450;
@@ -123,6 +149,14 @@
         background:#ff6450 url("../images/fire2.png") no-repeat;
         background-size: 100%;
         right: 10px;
+      }
+    }
+    .list_garyHotLabel{
+      color: #aaaaaa;
+      border: 1px solid #aaaaaa;
+      i{
+        background:#aaaaaa url("../images/fire2.png") no-repeat;
+        background-size: 100%;
       }
     }
   }
