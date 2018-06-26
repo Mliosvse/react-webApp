@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { List,PullToRefresh } from 'antd-mobile';
-import { get, post} from  '../utils/request';
+import { PullToRefresh } from 'antd-mobile';
+import { post} from  '../utils/request';
 import style from '../style/visted.less';
 import HorizontalLists from '../layout/horizontalLists'
 

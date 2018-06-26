@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { List } from 'antd-mobile';
-import { get, post} from  '../utils/request';
+import { post} from  '../utils/request';
 import style from '../style/money.less';
 
 class Money extends Component {

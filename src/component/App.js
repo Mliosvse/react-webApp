@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, Flex, Carousel, WingBlank } from 'antd-mobile';
+import { Carousel, WingBlank } from 'antd-mobile';
 import { get, post} from  '../utils/request';
 import style from '../style/App.less';
 import HorizontalLists from '../layout/horizontalLists'
